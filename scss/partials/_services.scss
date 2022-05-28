@@ -1,0 +1,41 @@
+@import './variables';
+@import './mixins';
+
+#services {
+  header {
+    color: $titleColor;
+    line-height: 2.6rem;
+  }
+  .cards.grid {
+    gap: 2.4rem;
+    @include media(md) {
+      grid-template-columns: repeat(3, 1fr);
+      .card {
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+      }
+    }
+    .card {
+      text-align: center;
+      padding: 5.8rem 3.2rem;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      border-bottom: 0.4rem solid $baseColor;
+      border-radius: 0.4rem 0.4rem 0 0;
+      &__icon {
+        color: $baseColor;
+        font-size: 8rem;
+        margin-bottom: 2.4rem;
+        transition: 0.3s;
+      }
+      &__title {
+        @extend .title;
+        font-size: 2.4rem;
+        margin-bottom: 1.2rem;
+      }
+      &:hover .card__icon {
+        cursor: pointer;
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

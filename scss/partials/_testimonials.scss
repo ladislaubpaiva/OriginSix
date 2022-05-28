@@ -1,0 +1,57 @@
+@import './variables';
+@import './mixins';
+
+#testimonials {
+  background-color: #fff;
+  header {
+    margin-bottom: 0;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    @include media(lg) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  blockquote {
+    padding: 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+
+    p {
+      color: $titleColor;
+      position: relative;
+      text-indent: 3rem;
+      margin-bottom: 2.4rem;
+      span {
+        color: $baseColor;
+        position: absolute;
+        font: map-get($weights, bd) 4.2rem serif;
+        top: -0.5rem;
+        left: -3rem;
+      }
+    }
+    cite {
+      @include flex(center);
+      gap: 0.8rem;
+      font-style: normal;
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: cover;
+        clip-path: circle();
+      }
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    padding: 4rem 2.4rem;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $baseColor;
+  }
+}

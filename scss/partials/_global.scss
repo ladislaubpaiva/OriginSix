@@ -1,0 +1,156 @@
+@import './variables';
+@import './mixins';
+
+//* RESET
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $headerHeight;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+//* BASE
+
+body {
+  color: $textColor;
+  background-color: $bodyColor;
+  font: map-get($weights, rg) 1.6rem $primaryFont;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  margin-top: calc($headerHeight + 3.2rem);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+//* LAYOUT
+.title {
+  color: $titleColor;
+  -webkit-font-smoothing: auto;
+  font: map-get($weights, bd) 3rem $titleFont;
+  @include media(md) {
+    font-size: 3.6rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  @include media(md) {
+    font-size: 1.8rem;
+  }
+}
+
+.logo {
+  color: $titleColor;
+  font: map-get($weights, bd) 2.1rem $titleFont;
+  span {
+    color: $baseColor;
+  }
+  &__alt span {
+    color: $textColorLight;
+  }
+}
+
+.container {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+  @include media(lg) {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include media(lg) {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+  .title {
+    margin-bottom: 1.6rem;
+  }
+  header {
+    margin-bottom: 6.4rem;
+    @include media(md) {
+      text-align: center;
+    }
+  }
+  strong {
+    color: $baseColor;
+  }
+}
+
+.divisor {
+  height: 1px;
+  background: linear-gradient(270deg, $baseColor 0%, rgba($baseColorSecond, 0.34) 100%);
+  &-2 {
+    height: 1px;
+    background: linear-gradient(270deg, rgba($baseColorSecond, 0.34) 0%, $baseColor 100%);
+  }
+}
+
+.button {
+  height: 5.6rem;
+  padding: 0 3.2rem;
+  align-items: center;
+  display: inline-flex;
+  border-radius: 0.4rem;
+  color: $textColorLight;
+  background-color: $baseColor;
+  font: map-get($weights, md) 1.6rem $primaryFont;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $baseColorAlt;
+  }
+  @include media(lg) {
+    height: 5rem;
+  }
+}
+
+.back-to-top {
+  background-color: $baseColor;
+  color: $textColorLight;
+
+  position: fixed;
+  bottom: 1.6rem;
+  right: 1.6rem;
+
+  font-size: 2.4rem;
+  line-height: 0;
+
+  padding: 0.8rem;
+  clip-path: circle();
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(100%);
+
+  transition: 0.3s;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+  }
+}

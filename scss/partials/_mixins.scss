@@ -1,0 +1,11 @@
+@mixin flex($align: unset, $jus: unset, $dir: unset) {
+  display: flex;
+  align-items: $align;
+  justify-content: $jus;
+  flex-direction: $dir;
+}
+@mixin media($min) {
+  @media (min-width: map-get($breakPoinsts, $min)) {
+    @content;
+  }
+}

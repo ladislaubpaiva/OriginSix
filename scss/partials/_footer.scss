@@ -1,0 +1,48 @@
+@import './variables';
+@import './mixins';
+
+footer {
+  background-color: $baseColor;
+  &.section {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+    @include media(lg) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      .container {
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+  }
+  .brand p {
+    color: $textColorLight;
+    margin-bottom: 1.2rem;
+    a {
+      color: $textColorLight;
+      text-decoration: underline;
+    }
+  }
+  .social {
+    @include flex;
+    gap: 3.2rem;
+  }
+  i {
+    font-size: 2.4rem;
+    color: $textColorLight;
+    transition: 0.3s;
+    display: inline-block;
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
+}

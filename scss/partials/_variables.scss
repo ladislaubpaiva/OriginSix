@@ -1,0 +1,28 @@
+$headerHeight: 7.2rem;
+//* Colors
+
+$hue: 270;
+
+//* HSL color mode */
+
+$baseColor: hsl($hue 36% 57%);
+$baseColorSecond: hsl($hue 65% 88%);
+$baseColorAlt: hsl($hue 57% 53%);
+$titleColor: hsl($hue 41% 10%);
+$textColor: hsl(0 0% 46%);
+$textColorLight: hsl(0 0% 98%);
+$bodyColor: hsl(0 0% 98%);
+
+//* Typography
+$titleFont: 'Poppins', sans-serif;
+$primaryFont: 'DM Sans', sans-serif;
+$weights: (
+  rg: 400,
+  md: 500,
+  bd: 700,
+);
+$breakPoinsts: (
+  xs: 768px,
+  md: 992px,
+  lg: 1200px,
+);
