@@ -46,6 +46,6 @@ You can view the layout of the project through [this link](https://www.figma.com
 
 ## 📝 License
 
-This project is under the MIT license. See the [LICENSE](.github/LICENSE) file for more details.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ---
