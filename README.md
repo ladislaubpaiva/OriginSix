@@ -2,7 +2,11 @@
   <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<<<<<<< HEAD
   <a href="#-license">License</a>
+=======
+  <a href="#memo-license">License</a>
+>>>>>>> 86c89b684a0f5331a3b105387425377a66bd0b94
 </p>
 
 <p align="center">
